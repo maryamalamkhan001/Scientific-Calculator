@@ -1,0 +1,150 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e5ec;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 25px 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1,h2,h3,h4 {
+    text-align: center;
+    color: #333;
+}
+
+.balance {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.summary p span#income { color: #2e7d32; }
+.summary p span#expense { color: #c62828; }
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.transaction-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+    justify-content: center;
+}
+
+.transaction-form input,
+.transaction-form select,
+.transaction-form button {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    flex: 1 1 100px;
+    min-width: 100px;
+}
+
+#addBtn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    flex: 1 1 100%;
+}
+
+#addBtn:hover { background-color: #45a049; }
+
+#transactions {
+    list-style: none;
+    padding: 0;
+}
+
+#transactions li {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7f9fc;
+    margin: 5px 0;
+    padding: 12px;
+    border-radius: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.income { color: #2e7d32; font-weight: bold; }
+.expense { color: #c62828; font-weight: bold; }
+
+button.delete-btn {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+button.delete-btn:hover { background-color: #e53935; }
+
+.chart-container {
+    margin-top: 25px;
+    background-color: #fdfdfd;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.charts-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.chart-box {
+    flex: 1 1 280px;
+    background-color: #fdfdfd;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .summary {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .filters, .transaction-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .charts-row {
+        flex-direction: column;
+    }
+    .chart-box {
+        width: 100%;
+    }
+}

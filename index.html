@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Finance Tracker</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Personal Finance Tracker</h1>
+
+<div class="balance">
+    <h2>Total Balance: $<span id="balance">0</span></h2>
+    <div class="summary">
+        <p>Income: $<span id="income">0</span></p>
+        <p>Expense: $<span id="expense">0</span></p>
+    </div>
+</div>
+
+<div class="filters">
+    <select id="monthFilter">
+        <option value="all">All Months</option>
+        <option value="Jan">January</option>
+        <option value="Feb">February</option>
+        <option value="Mar">March</option>
+        <option value="Apr">April</option>
+        <option value="May">May</option>
+        <option value="Jun">June</option>
+        <option value="Jul">July</option>
+        <option value="Aug">August</option>
+        <option value="Sep">September</option>
+        <option value="Oct">October</option>
+        <option value="Nov">November</option>
+        <option value="Dec">December</option>
+    </select>
+
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Salary">Salary</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bonus">Bonus</option>
+        <option value="Gift">Gift</option>
+    </select>
+</div>
+
+<div class="transaction-form">
+    <input type="text" id="description" placeholder="Enter Description">
+    <input type="number" id="amount" placeholder="Enter Amount">
+    <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+    <select id="category">
+        <option value="Salary">Salary</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bonus">Bonus</option>
+        <option value="Gift">Gift</option>
+    </select>
+    <select id="month">
+        <option value="Jan">January</option>
+        <option value="Feb">February</option>
+        <option value="Mar">March</option>
+        <option value="Apr">April</option>
+        <option value="May">May</option>
+        <option value="Jun">June</option>
+        <option value="Jul">July</option>
+        <option value="Aug">August</option>
+        <option value="Sep">September</option>
+        <option value="Oct">October</option>
+        <option value="Nov">November</option>
+        <option value="Dec">December</option>
+    </select>
+    <button id="addBtn">Add</button>
+</div>
+
+<div class="transaction-list">
+    <h3>Transactions</h3>
+    <ul id="transactions"></ul>
+</div>
+
+<div class="chart-container">
+    <h3>Overall Income vs Expense</h3>
+    <canvas id="financeChart"></canvas>
+</div>
+
+<div class="charts-row">
+    <div class="chart-box">
+        <h4>Monthly Income vs Expense</h4>
+        <canvas id="monthlyChart"></canvas>
+    </div>
+    <div class="chart-box">
+        <h4>Category-wise Breakdown</h4>
+        <canvas id="categoryChart"></canvas>
+    </div>
+</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
